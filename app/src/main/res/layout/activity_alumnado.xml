@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.aboubakr.actividad4adato.Alumnado">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TxtNobre"
+            android:layout_width="113dp"
+            android:layout_height="35dp"
+            android:text="nombre" />
+
+        <EditText
+            android:id="@+id/ediNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtEdad"
+            android:layout_width="113dp"
+            android:layout_height="35dp"
+            android:text="edad" />
+
+        <EditText
+            android:id="@+id/ediEdad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtciclo"
+            android:layout_width="113dp"
+            android:layout_height="35dp"
+            android:text="ciclo" />
+
+        <EditText
+            android:id="@+id/ediCiclo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtCurso"
+            android:layout_width="113dp"
+            android:layout_height="35dp"
+            android:text="curso actual" />
+
+        <EditText
+            android:id="@+id/ediCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtNota"
+            android:layout_width="113dp"
+            android:layout_height="35dp"
+            android:text="nota media" />
+
+        <EditText
+            android:id="@+id/ediNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="11"
+            android:text="Atras" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="283dp"
+            android:layout_height="52dp"
+            android:layout_column="0"
+            android:layout_row="12"
+            android:text="Para poder borrar introduzca el nombre de la perosna que desea"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/ediBorrrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnConsultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="10"
+            android:text="Consultar" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="13"
+            android:text="Borrar" />
+    </GridLayout>
+</LinearLayout>
