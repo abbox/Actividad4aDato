@@ -56,7 +56,7 @@ public class Alumnado extends AppCompatActivity {
             public void onClick(View view) {
                 SQLiteDatabase db = mydato.getWritableDatabase();
                 ContentValues valores = new ContentValues();
-                valores.put(MyDADatos.CAMPO_NOMBRE,ediNombre.getText().toString());
+                //valores.put(MyDADatos.CAMPO_NOMBRE,ediNombre.getText().toString());
                 valores.put(MyDADatos.CAMPO_EDAD,ediEdad.getText().toString());
                 valores.put(MyDADatos.CAMPO_CICLO,ediCiclo.getText().toString());
                 valores.put(MyDADatos.CAMPO_CURSO,ediCurso.getText().toString());

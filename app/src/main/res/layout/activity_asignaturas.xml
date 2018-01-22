@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aboubakr.actividad4adato.Asignaturas"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/TextID"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:layout_weight="0.03" />
+
+    <EditText
+        android:id="@+id/EdiID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+    <TextView
+        android:id="@+id/TextNombreA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nombre" />
+
+    <EditText
+        android:id="@+id/EditNombreA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+    <TextView
+        android:id="@+id/Texthoras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="horas" />
+
+    <EditText
+        android:id="@+id/Edithoras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnGuardarA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:text="guardar" />
+
+    <Button
+        android:id="@+id/btnConsula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:text="consulta" />
+</LinearLayout>

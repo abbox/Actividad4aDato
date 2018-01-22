@@ -29,6 +29,7 @@ public class Consultas extends AppCompatActivity {
     ArrayList<String> listaInformacion;
     ArrayList<alumnados> listaUsuarios;
     ArrayList<profesores> listaProfesores;
+    ArrayList<asignatura> listaAsignaturas;
 
     MyDADatos mydato = null;
 
@@ -57,6 +58,8 @@ public class Consultas extends AppCompatActivity {
         comboConsultas.add("Profesores por ciclo y curso");
         comboConsultas.add("Todos los profesores");
         comboConsultas.add("Todos los profesores y alumnos");
+        comboConsultas.add("Todos las asignaturas");
+
 
         ArrayAdapter<CharSequence> adapterSpinner;
 
@@ -107,6 +110,9 @@ public class Consultas extends AppCompatActivity {
                         //listaInformacion =todoEstudiantes();
                         //listaInformacion= todosProfesores();
                         listaInformacion =todosProfesoresAlumnos();
+                    }
+                    if (position == 10){
+                        listaInformacion=TodasLasAsignatuas();
                     }
                     //Log.d("Manel", "has polsat l'opció " + position);
                     adapterListView = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1, listaInformacion);
@@ -381,7 +387,31 @@ public class Consultas extends AppCompatActivity {
         }
         return al;
     }
+//consulta de las asignaturas
+    private ArrayList<String> TodasLasAsignatuas() {
+        SQLiteDatabase db=mydato.getReadableDatabase();
+
+        asignatura as = null;
+        listaAsignaturas = new ArrayList<asignatura>();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+MyDADatos.NOMBRE_TABLA2,null);
+
+        while (cursor.moveToNext()){
+            as = new asignatura(cursor.getString(0),cursor.getString(1),cursor.getString(2));
+
+            listaAsignaturas.add(as);
+        }
+        return obteberTodasAsignaturas(listaAsignaturas);
+    }
+    //obtenemos la informacion y la guardamos en nuestra lista
+    private ArrayList<String> obteberTodasAsignaturas(ArrayList<asignatura> listaAsignaturas) {
+        ArrayList <String> al = new ArrayList<String>();
+
+        for(int i=0;i<listaAsignaturas.size();i++){
+            al.add(listaAsignaturas.get(i).getNombre());
 
 
+        }
+        return al;
+    }
 
 }

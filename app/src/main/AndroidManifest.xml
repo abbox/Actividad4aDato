@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Alumnado" />
         <activity android:name=".Profesor" />
-        <activity android:name=".Consultas"></activity>
+        <activity android:name=".Consultas" />
+        <activity android:name=".Asignaturas"></activity>
     </application>
 
 </manifest>

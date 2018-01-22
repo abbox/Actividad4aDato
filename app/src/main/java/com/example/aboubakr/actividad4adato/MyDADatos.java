@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class MyDADatos extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION=1;
-    public static final String DATABASE_NAME= "MiBasedeDatos.db";
+    public static final String DATABASE_NAME= "MiBasedeDatos3.db";
 
 
 
@@ -35,6 +35,12 @@ public class MyDADatos extends SQLiteOpenHelper {
     public static final String CAMPO_CURSOP = "curso";
     public static final String CAMPO_DESPACHO = "despacho";
 
+    public static final String NOMBRE_TABLA2 = "Asignatura";
+    public static final String CAMPO_ID = "id";
+    public static final String CAMPO_NOMBREA = "nombre";
+    public static final String CAMPO_HORA = "hora";
+
+
 
 
     public static final String CREATE_TABLA_USUARIO = "CREATE TABLE " + NOMBRE_TABLA+ " " +
@@ -45,8 +51,14 @@ public class MyDADatos extends SQLiteOpenHelper {
             "(" + CAMPO_NOMBREP + " TEXT PRIMARY KEY, " + CAMPO_EDADP + " INTEGER, " + CAMPO_CICLOP + " TEXT, " + CAMPO_CURSOP + " TEXT, " + CAMPO_DESPACHO + " TEXT);";
 
 
+    public static final String CREATE_TABLA_ASIGNATURA = "CREATE TABLE " + NOMBRE_TABLA2+ " " +
+            "(" + CAMPO_ID + " TEXT PRIMARY KEY, " + CAMPO_NOMBREA + " TEXT, " + CAMPO_HORA + " INTEGER);";
+
+
+
     private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS" + NOMBRE_TABLA;
     private static final String SQL_DELETE_ENTRIES1 = "DROP TABLE IF EXISTS" + NOMBRE_TABLA1;
+    private static final String SQL_DELETE_ENTRIES2 = "DROP TABLE IF EXISTS" + NOMBRE_TABLA2;
 
 
     public MyDADatos(Context context) {
@@ -57,6 +69,7 @@ public class MyDADatos extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLA_USUARIO);
         db.execSQL(CREATE_TABLA_PROFESOR);
+        db.execSQL(CREATE_TABLA_ASIGNATURA);
 
     }
 
@@ -64,6 +77,7 @@ public class MyDADatos extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int versionAntigua, int versionNueva) {
         db.execSQL(SQL_DELETE_ENTRIES);
         db.execSQL(SQL_DELETE_ENTRIES1);
+        db.execSQL(SQL_DELETE_ENTRIES2);
         onCreate(db);
 
     }

@@ -10,7 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button alumnado;
-    Button Profesor;
+    Button Profesor,btnAsignatura;
+
 
 
     @Override
@@ -20,7 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         alumnado = (Button) findViewById(R.id.btnAlumnado);
         Profesor = (Button) findViewById(R.id.btnProfesor);
+        btnAsignatura = (Button) findViewById(R.id.btnAsignatura);
 
+        btnAsignatura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Asignaturas.class);
+                startActivity(i);
+            }
+        });
 
         alumnado.setOnClickListener(new View.OnClickListener() {
             @Override
